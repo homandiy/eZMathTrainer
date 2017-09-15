@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.homan.ezmathtrainer.AdditionTrainer">
+
+    <LinearLayout
+        android:id="@+id/startLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/optionAddition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text='"+" Taining Options'
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="-77dp" />
+
+        <GridLayout
+            android:id="@+id/optionGrid"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.52"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioGroup
+                android:id="@+id/radioMaxNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="2"
+                android:layout_row="0">
+
+                <RadioButton
+                    android:id="@+id/max10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:tag="10"
+                    android:text="within 10" />
+
+                <RadioButton
+                    android:id="@+id/max20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="20"
+                    android:text="within 20" />
+
+                <RadioButton
+                    android:id="@+id/max100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="100"
+                    android:text="within 100" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_row="0">
+
+                <RadioButton
+                    android:id="@+id/timer30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:tag="30"
+                    android:text="within 30 Seconds" />
+
+                <RadioButton
+                    android:id="@+id/timer60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="60"
+                    android:text="within 1 Minute" />
+
+                <RadioButton
+                    android:id="@+id/timer300"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="300"
+                    android:text="within 5 Minutes" />
+
+                <RadioButton
+                    android:id="@+id/timer600"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="600"
+                    android:text="within 10 Minutes" />
+
+            </RadioGroup>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="70dp"
+            android:background="@android:drawable/button_onoff_indicator_on"
+            android:backgroundTint="?attr/colorControlActivated"
+            android:gravity="center"
+            android:text="Addition Brain Test"
+            android:textColor="?android:attr/actionMenuTextColor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/toast_frame"
+            android:onClick="additionTrainerPage"
+            android:text="test\ngo, go, go!"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="50sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.55" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

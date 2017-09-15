@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">eZ Math Trainer</string>
+    <string name="title_activity_addition">AdditionActivity</string>
+</resources>
